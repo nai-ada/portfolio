@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'kingred';
-    src: url('fonts/Kingred.eot');
-    src: url('fonts/Kingred.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Kingred.woff2') format('woff2'),
-         url('fonts/Kingred.woff') format('woff'),
-         url('fonts/Kingred.ttf')  format('truetype'),
-         url('fonts/Kingred.svg#kingred') format('svg');
-}
