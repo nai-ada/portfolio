@@ -41,27 +41,38 @@ body {
   max-width: 100vw;
   min-height: 100vh;
   font-family: "DM Sans", sans-serif;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  cursor: none; 
 }
-
 
 h1 {
-  font-size: 6rem; 
-  line-height: 1.1;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  font-family: "milky";
   text-transform: uppercase;
-  font-weight: 100;
-  letter-spacing: 10px; 
-  font-family: "kingred";
-  color: #c59ec3;
-  text-align: center;
 }
 
-.placeholder-coding-image {
-  position: relative;
-  bottom: 35rem;
-  opacity: 50%;
-  z-index: -1;
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #e29edf;
+}
 
+.cursor-outline {
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.575);
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .instagram-logo {
@@ -95,40 +106,69 @@ h1 {
   margin-top: 20px; 
 }
 
-.home-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center; 
-  width: 100%; 
-  height: 100vh;
- }
+
 
  @font-face {
   font-family: 'kingred';
   src: url('fonts/fonts/Kingred.otf');
 }
+
+@font-face {
+  font-family: 'milky';
+  src: url('fonts/fonts/Milky.otf');
+}
+
+@font-face {
+  font-family: 'cloud';
+  src: url('fonts/fonts/Cloud.otf');
+}
+
+@font-face {
+  font-family: 'aurabella';
+  src: url('fonts/fonts/Aura-Bella.otf');
+}
+
+@font-face {
+  font-family: 'japan';
+  src: url('fonts/fonts/Japandi-Regular.otf');
+}
  
- .home-section h1 {
-  font-size: 2rem;
-  margin-top: 0; 
-  font-weight: 400;
-  font-family: 'kingred'; 
-  letter-spacing: 1rem;
- }
+
+@font-face {
+  font-family: 'soul';
+  src: url('fonts/fonts/Soul-Note.otf');
+}
+
+@font-face {
+  font-family: 'cai';
+  src: url('fonts/fonts/Cailyne.otf');
+}
+
+@font-face {
+  font-family: 'indigo';
+  src: url('fonts/fonts/Indigo.otf');
+}
+
+@font-face {
+  font-family: 'mont';
+  src: url('fonts/fonts/Montreal-Regular.ttf');
+}
+
 
 h2 {
   font-size: 1.2rem; 
   font-family: "DM Sans", sans-serif;
-  letter-spacing: 1.5px; 
+  letter-spacing: 1px; 
   font-weight: 200;
   text-align: center;
+
 }
 
-.about-section h2,
-.about-section p {
-  padding-left: 2rem;
+
+
+.home-titles h2 {
+  margin: 0;
+  padding: 0;
 }
 
 .menu-nav-header {
@@ -197,9 +237,119 @@ h2 {
    
 }
 
-.home-section {
-  margin-bottom: 15rem;
+.home-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  align-items: center;
+  text-align: center; 
+  width: 100%;
+  height: 90vh; /* Adjusted height to occupy 90% of the viewport height */
+  margin-top: 22vh; /* Add margin-top to move the section up */
 }
+
+
+ .intro {
+  font-size: 4rem;
+    padding: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-family: "milky";
+    letter-spacing: 10px;
+  }
+ 
+ .main-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  font-family: "milky";
+  letter-spacing: 10px;
+  
+ }
+
+
+ @media(min-width: 550px) {
+  .intro {
+    font-size: 5.3rem;
+      padding: 0;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+   
+   .main-title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-top: 0;
+   }
+
+ }
+
+ @media(min-width: 1000px) {
+  .intro {
+    font-size: 7.3rem;
+      padding: 0;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+   
+   .main-title {
+    font-size: 7rem;
+    text-transform: uppercase;
+    margin-top: 0;
+   }
+
+ }
+
+
+@media(min-width:1800px) {
+.intro {
+  font-size: 8rem;
+    padding: 0;
+    margin-bottom: 0;
+    margin-right: 80rem;
+    text-transform: uppercase;
+    padding: 0;
+  }
+ 
+ .main-title {
+  font-size: 8rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-right: 65rem;
+  margin-bottom: 0;
+  padding: 0;
+ }
+
+ .home-titles h2{
+  margin-top: 0;
+  margin-right: 77rem;
+  margin-bottom: 25rem;
+  padding: 0;
+ }
+
+}
+ 
+
+.about-section h3 {
+  font-size: 1.6rem;
+  font-family: "DM Sans";
+  font-weight: 300;
+  text-align: center;
+
+}
+
+
+.apod-image {
+  width: 100%;
+  opacity: 30%;
+  height: 43%;
+  position: absolute;
+  top: 89.5rem; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: -1;
+}
+
 
 .project-wrapper h2 {
   font-size: 2rem;
@@ -268,7 +418,73 @@ h2 {
 
 .about-section h2 {
   text-align: left;
+  padding: 1rem;
+  
 }
+
+.about-section {
+  margin: 0;
+}
+
+.about-section h1,
+.tech-stack-section h1 {
+  padding: 1rem;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 3rem; 
+}
+
+
+.tech-stack-section h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+/* Style the dropdown button */
+.dropdown-toggle {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px; /* Optional: Add margin below the button */
+  justify-content: center;
+  display: flex;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Style the dropdown content items */
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-content li {
+  padding: 5px 0;
+  color: #333;
+}
+
+
+
+.about-section p {
+  font-size: 12px;
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  margin-left: 1rem;
+}
+
 
 .tech-stack-section h1 {
   margin-top: 10rem;
@@ -278,6 +494,7 @@ h2 {
   margin-top: 10rem;
   text-transform: inherit;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .contact-section {
@@ -293,7 +510,7 @@ h2 {
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
-    letter-spacing: 8px;
+    letter-spacing: 7px;
   }
 
   h2 {
@@ -302,7 +519,7 @@ h2 {
   }
 
   .about-section {
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 

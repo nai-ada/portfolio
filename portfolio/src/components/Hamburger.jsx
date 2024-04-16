@@ -20,10 +20,10 @@ const MenuContainer = styled(motion.div)`
  max-width: 25%;
  min-width: 300px;
  height: 100%;
- background: rgba(55, 7, 57, 0.09);
+ background: rgba(255, 255, 255, 0.08);
  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
- backdrop-filter: blur(2.8px);
- -webkit-backdrop-filter: blur(3.7px); 
+ backdrop-filter: blur(4.5px);
+ -webkit-backdrop-filter: blur(4.5px);
  z-index: 1800;
  position: fixed;
  top: 0;

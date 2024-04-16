@@ -6,26 +6,12 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-// import CursorPointer from './components/Cursor';
+import APOD from './components/Apod';
 
 function App() {
-  
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
-    // const [size, setSize] = useState(32);
 
-    useEffect(() => {
-      const handleMouseMovement = (e) => {
-        // console.log(e.clientX, e.clientY);
-        setX(e.clientX);
-        setY(e.clientY);
-      }
+  const apiKey = 'k7Qr40gmaxGT8Ut3ms8YGLJPnpG85Ivzt2vYrM8C';
 
-      document.addEventListener('mousemove', handleMouseMovement);
-      return () => {
-        document.removeEventListener('mousemove', handleMouseMovement);
-      }
-    }, [x, y]);
 
   return (
 
@@ -35,14 +21,13 @@ function App() {
         <Nav />
         <Home />
       </div>
+      <div className="App">
+          <APOD apiKey={apiKey} />
+        </div>
         <About />
         <Projects />
         <Contact />
         <Footer />
-        {/* <CursorPointer
-        x={x}
-        y={y}
-        /> */}
 
         {/* <Routes>
           <Route exact path="/" element={<Home />} />

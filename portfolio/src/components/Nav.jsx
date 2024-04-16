@@ -7,13 +7,13 @@ function Nav(props) {
   return (
     <header>
       <nav>
-        <div class="title-and-logo">
+        <div className="title-and-logo">
         <Link to="/">
           <img src={logoImage} alt="Nadia Vespalec Portfolio Logo" width="50px" className="nadia-logo" />
         </Link>
-        <p className='front-end-title'>| Front-End Web Developer</p>
+        <p className='front-end-title'>| Web Design + Development</p>
         </div>
-        <div class="menu-nav-header">
+        <div className="menu-nav-header">
         <Hamburger/>
         </div>
       </nav>
