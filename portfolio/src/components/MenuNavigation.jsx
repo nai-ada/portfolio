@@ -87,7 +87,7 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
-            <a href="#">Projects</a>
+            <a href="#">Works</a>
           </NavLink>
           <NavLink
             initial={false}

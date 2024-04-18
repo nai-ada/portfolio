@@ -26,7 +26,7 @@ const APOD = ({ apiKey }) => {
 
   return (
     <div>
-      <img src={apodData.url} alt={apodData.title} className='apod-image' />
+      <img src={apodData.url} alt={apodData.title} className='apod-image' width="800px"/>
     </div>
   );
 };

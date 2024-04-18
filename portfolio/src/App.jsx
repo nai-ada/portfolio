@@ -6,7 +6,9 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import APOD from './components/Apod';
+import AboutTabs from './components/AboutTabs';
+
+// import APOD from './components/Apod';
 
 function App() {
 
@@ -21,10 +23,11 @@ function App() {
         <Nav />
         <Home />
       </div>
-      <div className="App">
+      {/* <div className="App">
           <APOD apiKey={apiKey} />
-        </div>
+        </div> */}
         <About />
+        <AboutTabs />
         <Projects />
         <Contact />
         <Footer />
