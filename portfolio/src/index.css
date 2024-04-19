@@ -2,6 +2,10 @@
 / Box Sizing Reset */
 html {
   box-sizing: border-box;
+  margin: 0;
+ padding: 0;
+ width: 100%;
+ overflow-x: hidden;
 }
 
 :before, :after {
@@ -25,7 +29,7 @@ video {
   line-height: 1.5;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(200deg, #000000,#1f141f);
+  background: linear-gradient(-85deg, #201420, #000000);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -38,11 +42,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100vw;
+  width: 100%;
   min-height: 100vh;
+  padding: 0;
   font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
   cursor: none; 
+  overflow-x: hidden;
 }
 
 h1 {
@@ -85,6 +90,15 @@ h1 {
   width: 100%;
   height: 90vh; /* Adjusted height to occupy 90% of the viewport height */
   margin-top: 32vh; /* Add margin-top to move the section up */
+}
+
+
+@media(min-width: 500px) {
+  .home-titles {
+    margin-top: 26vh; /* Add margin-top to move the section up */
+
+  }
+  
 }
 
 .instagram-logo {
@@ -176,12 +190,12 @@ h2 {
 
 }
 
-.tech-stack-section h3 {
+/* .tech-stack-section h3 {
   font-size: 1.8rem;
   font-family: "DM Sans";
   text-align: left;
   margin-left: 2rem;
-}
+} */
 
 
 .home-titles h2 {
@@ -258,9 +272,6 @@ h2 {
    
 }
 
-
-
-
  .intro {
     font-size: 3.5rem;
     padding: 0;
@@ -268,6 +279,7 @@ h2 {
     text-transform: uppercase;
     font-family: "kingred";
     letter-spacing: 10px;
+    color: #c9a4c7;
   }
  
  .main-title {
@@ -276,10 +288,11 @@ h2 {
   margin-top: 0;
   font-family: "kingred";
   letter-spacing: 10px;
+  color: #c9a4c7;;
  }
 
 
- @media(min-width: 550px) {
+ @media(min-width: 500px) {
   .intro {
     font-size: 5.3rem;
       padding: 0;
@@ -288,7 +301,7 @@ h2 {
     }
    
    .main-title {
-    font-size: 5rem;
+    font-size: 4.2rem;
     text-transform: uppercase;
     margin-top: 0;
    }
@@ -322,7 +335,7 @@ h2 {
     font-size: 7rem;
     text-transform: uppercase;
     margin-top: 0; /* Adjust top margin to move element higher */
-    margin-right: 68rem; /* Adjust right margin to move element to the left */
+    margin-right: 67rem; /* Adjust right margin to move element to the left */
     margin-bottom: 0;
     padding: 0;
   }
@@ -331,18 +344,44 @@ h2 {
     font-size: 7rem;
     text-transform: uppercase;
     margin-top: 0; /* Adjust top margin to move element higher */
-    margin-right: 51rem; /* Adjust right margin to move element to the left */
+    margin-right: 50rem; /* Adjust right margin to move element to the left */
     margin-bottom: 0;
     padding: 0;
   }
 
   .home-titles h2 {
-    margin-top: 0; /* Adjust top margin to move element higher */
-    margin-right: 80rem; /* Adjust right margin to move element to the left */
+    margin-top: 1rem; /* Adjust top margin to move element higher */
+    margin-right: 75rem; /* Adjust right margin to move element to the left */
     margin-bottom: 0; /* Adjust bottom margin if needed */
     padding-top: 1rem;
+    font-size: 1.4rem;
   }
+
+
+  .projects-section{
+    font-size: 3rem;
+    padding-left: 15rem;
+    padding-bottom: 15rem;
+  }  
+
+
+  .projects-section h1{
+    font-size: 3rem;
+  }
+
+  
+
+
 }
+
+.tech-stack-section h3 {
+font-size: 1.7rem;
+font-family: "DM Sans";
+text-align: left;
+margin-left: 1.8rem;
+}
+
+
 
 
 .about-section h3 {
@@ -350,7 +389,6 @@ h2 {
   font-family: "DM Sans";
   text-align: left;
   margin-left: 1rem;
-
 }
 
 #up {
@@ -465,38 +503,42 @@ h2 {
   font-size: 1.9rem;
   text-align: left;
   padding-left: 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
   font-family: "DM Sans";
 }
 
 .projects-description p {
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 2rem;
+  padding-top: 0;
+  margin: 0;
+  padding-bottom: 0;
 }
+
+
 
 .projects-title {
   text-transform: uppercase;
-  text-align: right;
-  font-size: 1.4rem;
-  margin-top: 2rem;
-  margin-left: 3rem;
-  padding: 0.7rem;
+  font-size: 2rem;
+  margin-bottom: 0;
+  padding: 0;
   position: relative;
+  top: 7rem;
+  font-weight: 600;
+  font-family: "kingred";
+
 }
 
-.projects-title::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: calc(100%); 
-  border-left: 1px solid white;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+.projects-section h1 {
+  margin-left: 1.2rem;
+  font-size: 2.8rem;
+  display: flex;
+  justify-content: left;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  padding-left: 1rem;
 }
-
 
 .nav-links {
   font-family: "Poppins", sans-serif;
@@ -510,12 +552,117 @@ h2 {
 }
 
 
- .projects-section h1 {
-  margin-top: 10rem;
-  font-size: 2.8rem;
-  margin-left: 1.5rem;
- }
- 
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  height: 430px;
+}
+
+
+.project-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding: 0;
+  opacity: 70%;
+}
+
+.projects-sub {
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  top: 21rem;
+  padding: 0.6rem;
+  border: none;
+  color: #c9a4c7;
+
+}
+
+/* code via Nguyen Anh Tuan on codepen.io */
+
+.style-2 {
+  height: 30px;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  /* Hide extra text */
+  .mask {
+    position: relative;
+    padding: 0;
+    height: 20px;
+    top: 1rem;
+    /*  Remove overflow to see how it works　:) */
+    overflow: hidden;
+    .link-container {
+      transition: transform 0.4s ease;
+    }
+    .title {
+      display: block;
+      /*  Set same font-size and line height  */
+      font-size: 17px;
+      line-height: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    .link-title1 {
+      transform-origin: right center;
+      text-transform: uppercase;
+    }
+
+    .link-title2 {
+      transform-origin: left center;
+      transform: rotate(20deg);
+      text-transform: uppercase;
+    }
+  }
+  .link-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #f8f8ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    top: 1rem;
+    /*  Remove overflow to see how it works　:) */
+    overflow: hidden;
+    .icon {
+      display: block;
+      position: absolute;
+      transition: transform 0.4s ease;
+      &:nth-child(2) {
+        transform: translate(-40px);
+      }
+      /* Hover Action*/
+    }
+  }
+  &:hover {
+    /* Move up two texts (20px = font-size) */
+    .link-container {
+      transform: translateY(-20px);
+    }
+    /* Rotate texts a little bit */
+    .link-title1 {
+      transform: rotate(20deg);
+    }
+    .link-title2 {
+      transform: rotate(0);
+    }
+    /* Move arrows to right */
+    .icon:first-child {
+      transform: translate(40px);
+    }
+    .icon:nth-child(2) {
+      transform: translate(0px);
+    }
+  }
+}
+
 
 .front-end-title {
   font-size: 0.7rem;
@@ -525,6 +672,7 @@ h2 {
   text-align: left;
   padding: 1rem;
   font-size: 1.2rem;
+  padding-top: 0;
   
 }
 
@@ -541,14 +689,14 @@ h2 {
   margin-bottom: 3rem;
 }
 
-.tech-stack-section h3 {
+/* .tech-stack-section h3 {
   margin-left: 1.2rem;
   display: flex;
   justify-content: left;
   margin-top: 0;
   margin-bottom: 3rem;
   margin-left: 2rem;
-}
+} */
 
 .stack-h1 {
   font-size: 1.8rem;
@@ -604,10 +752,10 @@ h2 {
 }
 
 
-.tech-stack-section h3 {
+/* .tech-stack-section h3 {
   margin-top: 3rem;
   margin-bottom: 1rem;
-}
+} */
 
 .tabs-content h2 {
   font-size: 1rem;
@@ -670,7 +818,7 @@ h2 {
 }
 
 .skill-items {
-  margin-right: 2rem;
+  margin-right: 12px;
   margin-top: 2rem;
   font-size: 1rem;
   display: inline-block;
@@ -730,25 +878,45 @@ h2 {
     padding: 2rem;
   }
 
-  .tech-stack-section h3 {
-    font-family: "DM Sans";
-    text-align: left;
-    margin-left: 1rem;
-    padding-left: 2rem;
+  .tech-stack-section {
+    padding: 2rem;
     
   }
 }
 
 
 @media (min-width: 900px) {
-  .about-section {
+  .about-section,
+  .contact-section {
     padding: 4rem;
   }
 
-  .tech-stack-section h3 {
+  /* .tech-stack-section h3 {
     padding-left: 4rem;
     font-size: 1.8rem;
+  } */
+
+  .projects-section,
+  .contact-section {
+    padding: 25rem;
+    padding-bottom: 5rem;
+    padding-top: 0;
+
   }
+
+  .projects-section h1 {
+    margin-top: 5rem;
+  }
+
+  .project-container {
+    display: block;
+  }
+
+  .project-image {
+    display: block;
+    width: 900px;
+  }
+  
 }
 
 
@@ -760,7 +928,7 @@ h2 {
 
 
   .about-section {
-    padding: 15rem;
+    padding: 25rem;
     padding-bottom: 5rem;
     padding-top: 0;
   }
@@ -780,16 +948,27 @@ h2 {
   }
 
   .column-tabs {
-    padding-left: 10rem;
-    padding-right: 10rem;
-
+    padding: 30rem;
+    padding-bottom: 5rem;
+    padding-top: 0;
   }
 
-  .tech-stack-section h3 {
+  /* .tech-stack-section h3 {
     margin-left: 12rem;
     font-size: 2rem;
-  }
+  } */
+
 }
+
+/* .tech-stack-section h3 {
+  font-size: 1.8rem;
+  font-family: "DM Sans";
+  text-align: left;
+  margin-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+ }
+  */
 
 
 .tabs-wrapper {
@@ -802,6 +981,14 @@ h2 {
   text-transform: inherit;
   text-align: left;
   text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.contact-section h3 {
+  font-size: 1.7rem;
+  text-align: left;
+  margin-top: 3rem;
 }
 
 .contact-section {
@@ -810,6 +997,7 @@ h2 {
 
 .contact-section p {
   margin-top: 3rem;
+  font-size: 1.2rem;
 }
 
 
@@ -829,7 +1017,6 @@ h2 {
     padding: 1rem;
   }
 }
-
 
 .header-content {
   height: 80rem;
