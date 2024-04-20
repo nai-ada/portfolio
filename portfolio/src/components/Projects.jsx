@@ -10,19 +10,22 @@ const projects = [
   {
     name: 'Froth Matcha.',
     imageUrl: frothImage,
-    sub: 'WordPress | PHP'
+    sub: 'WordPress | PHP',
+    id: '1'
 
   },
   {
     name: 'Galaxy Grid.',
     imageUrl: galaxyImage,
-    sub: 'JavaScript | CSS'
+    sub: 'JavaScript | CSS',
+    id: '2'
 
   },
   {
     name: 'Clippr DB.',
     imageUrl: clipprImage,
-    sub: 'React.js | SASS'
+    sub: 'React.js | SASS',
+    id: '3'
     
   }
 ];
@@ -31,9 +34,8 @@ function Projects() {
   return (
     <>
       <div className="projects-section">
-        <h1>Works</h1>
-
       <div className="projects-description">
+        <h1>Works</h1>
         <h3>On Gaining Experience</h3>
         <p>
           Working alongside others on web development projects has been an enriching experience,
@@ -47,8 +49,6 @@ function Projects() {
           <div key={index} className="project-container">
             <h3 className="projects-title">{project.name}</h3>
             <h2 className="projects-sub">{project.sub}</h2>
-
-            <img src={project.imageUrl} alt={project.name} className="project-image" width="300px"/>
             <div class="linkWrap">
 
           {/* code via Nguyen Anh Tuan on codepen.io  */}
@@ -69,6 +69,9 @@ function Projects() {
             </div>
           </a>
         </div>
+
+            <img src={project.imageUrl} alt={project.name} className="project-image" width="300px"/>
+            
             
         </div>
         ))}

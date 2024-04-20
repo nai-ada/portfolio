@@ -30,14 +30,19 @@ function AboutTabs() {
     };
 
     return (
+
+        
         <div className='tabs-wrapper'>
+            
+            <h3>Some Things I'm Good At</h3>
+            
             <div className='column-tabs'>
                 <ul className='ul-tabs'>
-                    <li onClick={()=>updateToggle(1)}><img src={languageIcon} alt="Icon to represent languages" className="lang-icon" width="40px"/></li>
-                    <li onClick={()=>updateToggle(2)}><img src={codingIcon} alt="Icon to represent development tools" className="coding-icon" width="40px"/></li>
-                    <li onClick={()=>updateToggle(3)}><img src={designIcon} alt="Icon to represent design tools" className="design-icon" width="40px"/></li>
-                    <li onClick={()=>updateToggle(4)}><img src={gameIcon} alt="Icon to represent languages" className="game-icon" width="40px"/></li>
-                    <li onClick={()=>updateToggle(5)}><img src={starIcon} alt="Icon to represent hobbies" className="star-icon" width="40px"/></li>
+                    <li className={`${toggle == 1 ? "highlighted-tab" : ""}`} onClick={()=>updateToggle(1)}><img src={languageIcon} alt="Icon to represent languages" className= "lang-icon"  width="40px"/></li>
+                    <li className={`${toggle == 2 ? "highlighted-tab" : ""}`} onClick={()=>updateToggle(2)}><img src={codingIcon} alt="Icon to represent development tools" className="coding-icon" width="40px"/></li>
+                    <li className={`${toggle == 3 ? "highlighted-tab" : ""}`} onClick={()=>updateToggle(3)}><img src={designIcon} alt="Icon to represent design tools" className= "design-icon" width="40px"/></li>
+                    <li className={`${toggle == 4 ? "highlighted-tab" : ""}`} onClick={()=>updateToggle(4)}><img src={gameIcon} alt="Icon to represent languages" className= "game-icon" width="40px"/></li>
+                    <li className={`${toggle == 5 ? "highlighted-tab" : ""}`} onClick={()=>updateToggle(5)}><img src={starIcon} alt="Icon to represent hobbies" className= "star-icon" width="40px"/></li>
                 </ul>
 
                 <div className={toggle === 1 ? "show-content" : "tabs-content"}>

@@ -84,18 +84,18 @@ h1 {
 .home-titles {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content at the top */
+  justify-content: flex-start;
   align-items: center;
   text-align: center; 
   width: 100%;
-  height: 90vh; /* Adjusted height to occupy 90% of the viewport height */
-  margin-top: 32vh; /* Add margin-top to move the section up */
+  height: 90vh; 
+  margin-top: 32vh; 
 }
 
 
 @media(min-width: 500px) {
   .home-titles {
-    margin-top: 26vh; /* Add margin-top to move the section up */
+    margin-top: 26vh; 
 
   }
   
@@ -189,14 +189,6 @@ h2 {
   text-align: center;
 
 }
-
-/* .tech-stack-section h3 {
-  font-size: 1.8rem;
-  font-family: "DM Sans";
-  text-align: left;
-  margin-left: 2rem;
-} */
-
 
 .home-titles h2 {
   margin: 0;
@@ -334,8 +326,8 @@ h2 {
   .intro {
     font-size: 7rem;
     text-transform: uppercase;
-    margin-top: 0; /* Adjust top margin to move element higher */
-    margin-right: 67rem; /* Adjust right margin to move element to the left */
+    margin-top: 0; 
+    margin-right: 67rem; 
     margin-bottom: 0;
     padding: 0;
   }
@@ -343,16 +335,16 @@ h2 {
   .main-title {
     font-size: 7rem;
     text-transform: uppercase;
-    margin-top: 0; /* Adjust top margin to move element higher */
-    margin-right: 50rem; /* Adjust right margin to move element to the left */
+    margin-top: 0; 
+    margin-right: 50rem; 
     margin-bottom: 0;
     padding: 0;
   }
 
   .home-titles h2 {
-    margin-top: 1rem; /* Adjust top margin to move element higher */
-    margin-right: 75rem; /* Adjust right margin to move element to the left */
-    margin-bottom: 0; /* Adjust bottom margin if needed */
+    margin-top: 1rem;
+    margin-right: 75rem; 
+    margin-bottom: 0; 
     padding-top: 1rem;
     font-size: 1.4rem;
   }
@@ -360,7 +352,6 @@ h2 {
 
   .projects-section{
     font-size: 3rem;
-    padding-left: 15rem;
     padding-bottom: 15rem;
   }  
 
@@ -374,14 +365,15 @@ h2 {
 
 }
 
-.tech-stack-section h3 {
-font-size: 1.7rem;
-font-family: "DM Sans";
-text-align: left;
-margin-left: 1.8rem;
+.tabs-wrapper h3 {
+  padding-left: 2rem;
+  padding-right: 4rem;
+  padding-bottom: 3rem;
+  font-family: "DM Sans";
+  text-transform: inherit;
+  font-size: 1.8rem;
+  text-align: left;
 }
-
-
 
 
 .about-section h3 {
@@ -391,93 +383,166 @@ margin-left: 1.8rem;
   margin-left: 1rem;
 }
 
-#up {
+.up {
   position: absolute;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   border-radius: 50%;
-  background-image: linear-gradient(80deg, #9844a3, #ffb2ff);
+  background-image: linear-gradient(-85deg, #201420, #3a1f36, #000000);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.2;
-  animation: floatDown 60s infinite;
+  opacity: 0.5;
+  animation: floatDown 40s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 
-#down {
+
+.down {
   position: absolute;
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   border-radius: 50%;
   right: 0;
   background-image: linear-gradient(80deg, #b8369b, #ffd1b2);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.2;
-  animation: floatUp 60s infinite;
+  opacity: 0.5;
+  animation: floatUp 40s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 
 
-#left {
+.left {
   position: absolute;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border-radius: 50%;
   background-image: linear-gradient(80deg, #7e36b8, #b2beff);
-  filter: blur(150px);
+  filter: blur(90px);
   z-index: -5;
-  opacity: 0.2;
-  animation: floatLeft 60s 1.5s infinite;
+  opacity: 0.5;
+  animation: floatLeft 40s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 
-#right {
+.right {
   position: absolute;
-  height: 200px;
-  width: 200px;
+  height: 350px;
+  width: 350px;
   border-radius: 50%;
-  background-image: linear-gradient(80deg, #66deee, #8597ff);
-  filter: blur(150px);
+  background-image: linear-gradient(80deg, #6be8f8, #8597ff);
+  filter: blur(90px);
   z-index: -5;
-  opacity: 0.2;
-  animation: floatRight 60s 1s infinite;
+  opacity: 0.5;
+  animation: floatRight 40s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 
 @keyframes floatDown {
-  0%, 100% {
-    top: -100%;
+  0% {
+    top: -20%;
+    left: 0;
   } 
-  70% {
-    top: 700px;
+  15% {
+    top: 100px;
+    left: 100px;
+  } 
+  30% {
+    top: 300px;
+    left: 200px;
+  }
+  60% {
+    top: 500px;
+    left: 300px;
+  }
+  80% {
+    top: 600px;
+    left: 400px;
+  }
+  100% {
+    top: 500px;
+    left: 300px;
   }
 }
 
 @keyframes floatUp {
-  0%, 100% {
-    bottom: -100%;
+  0% {
+    bottom: -20%;
+    right: 0;
   } 
-  70% {
+  15% {
+    bottom: 200px;
+    right: 250px;
+  } 
+  30% {
+    bottom: 400px;
+    right: 300px;
+  }
+  60% {
+    bottom: 600px;
+    right: 400px;
+  }
+  80% {
     bottom: 700px;
+    right: 500px;
+  }
+  100% {
+    bottom: 800px;
+    right: 700px;
   }
 }
 
 @keyframes floatLeft {
-  0%, 100% {
-    left: -100%;
+  0% {
+    bottom: -20%;
+    left: 0;
   } 
-  70% {
-    left: 700px;
+  15% {
+    bottom: 50px;
+    left: 70px;
+  } 
+  30% {
+    bottom: 150px;
+    left: 100px;
+  }
+  60% {
+    bottom: 350px;
+    left: 150px;
+  }
+  80% {
+    bottom: 300px;
+    left: 200px;
+  }
+  100% {
+    bottom: 400px;
+    left: 300px;
   }
 }
 
 @keyframes floatRight {
-  0%, 100% {
-    right: -100%;
+  0% {
+    top: -20%;
+    right: 0;
   } 
-  70% {
-    right: 1300px;
+  15% {
+    top: 60px;
+    right: 100px;
+  } 
+  30% {
+    top: 170px;
+    right: 190px;
+  }
+  60% {
+    top: 420px;
+    right: 230px;
+  }
+  80% {
+    top: 500px;
+    right: 400px;
+  }
+  100% {
+    top: 580px;
+    right: 460px;
   }
 }
 
@@ -551,15 +616,13 @@ margin-left: 1.8rem;
   margin-right: 3rem;
 }
 
-
 .project-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
+  text-align: center;
   height: 430px;
 }
-
 
 .project-image {
   width: 100%;
@@ -577,31 +640,28 @@ margin-left: 1.8rem;
   padding: 0.6rem;
   border: none;
   color: #c9a4c7;
-
 }
 
 /* code via Nguyen Anh Tuan on codepen.io */
-
 .style-2 {
   height: 30px;
   align-items: center;
   color: #ffffff;
   text-decoration: none;
   display: flex;
-  /* Hide extra text */
+  
   .mask {
     position: relative;
     padding: 0;
     height: 20px;
     top: 1rem;
-    /*  Remove overflow to see how it works　:) */
     overflow: hidden;
     .link-container {
       transition: transform 0.4s ease;
     }
+
     .title {
       display: block;
-      /*  Set same font-size and line height  */
       font-size: 17px;
       line-height: 20px;
       transition: transform 0.4s ease;
@@ -629,7 +689,6 @@ margin-left: 1.8rem;
     align-items: center;
     margin-left: 10px;
     top: 1rem;
-    /*  Remove overflow to see how it works　:) */
     overflow: hidden;
     .icon {
       display: block;
@@ -638,22 +697,18 @@ margin-left: 1.8rem;
       &:nth-child(2) {
         transform: translate(-40px);
       }
-      /* Hover Action*/
     }
   }
   &:hover {
-    /* Move up two texts (20px = font-size) */
     .link-container {
       transform: translateY(-20px);
     }
-    /* Rotate texts a little bit */
     .link-title1 {
       transform: rotate(20deg);
     }
     .link-title2 {
       transform: rotate(0);
     }
-    /* Move arrows to right */
     .icon:first-child {
       transform: translate(40px);
     }
@@ -689,14 +744,6 @@ margin-left: 1.8rem;
   margin-bottom: 3rem;
 }
 
-/* .tech-stack-section h3 {
-  margin-left: 1.2rem;
-  display: flex;
-  justify-content: left;
-  margin-top: 0;
-  margin-bottom: 3rem;
-  margin-left: 2rem;
-} */
 
 .stack-h1 {
   font-size: 1.8rem;
@@ -711,26 +758,23 @@ margin-left: 1.8rem;
   margin-bottom: 2rem;
 }
 
-/* Style the dropdown button */
 .dropdown-toggle {
   background-color: #f1f1f1;
   color: #333;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  margin-bottom: 10px; /* Optional: Add margin below the button */
+  margin-bottom: 10px; 
   justify-content: center;
   display: flex;
 }
 
-/* Style the dropdown content (hidden by default) */
 .dropdown-content {
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
 
-/* Style the dropdown content items */
 .dropdown-content ul {
   list-style-type: none;
   padding: 0;
@@ -751,11 +795,6 @@ margin-left: 1.8rem;
   margin-left: 1rem;
 }
 
-
-/* .tech-stack-section h3 {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-} */
 
 .tabs-content h2 {
   font-size: 1rem;
@@ -797,9 +836,9 @@ margin-left: 1.8rem;
   padding-bottom: 0.35rem;
   margin-right: 10px;
   margin-bottom: 5px;
-  border-radius: 30%;
+  border-radius: 20%;
   cursor: pointer;
-  transition: color 0.3s ease-out, transform 0.5s ease-out;
+  
 }
 
 @media (min-width: 400px) {
@@ -829,12 +868,10 @@ margin-left: 1.8rem;
 }
 
 
-/* Increase specificity of active state selector */
-.ul-tabs li.active {
-    color: black;
-    background: #e29edf; 
-    border-radius: 30%;
+.highlighted-tab {
+    color: black; 
     transform: scale(1.1);
+    transition: color 0.3s ease-out, transform 0.5s ease-out;
     box-shadow: 0 0 10px rgba(245, 172, 233, 0.3); 
     animation: glow 1s infinite alternate; 
 }
@@ -874,47 +911,80 @@ margin-left: 1.8rem;
 }  
 
 @media (min-width: 700px) {
-  .about-section {
+  .about-section,
+  .tech-stack-section h3,
+  .projects-section {
     padding: 2rem;
   }
 
-  .tech-stack-section {
-    padding: 2rem;
-    
+  .projects-section h1 {
+    margin-left: 0;
+  }
+
+  .projects-description h3,
+  .projects-description p {
+    padding-left: 1rem;
   }
 }
 
-
 @media (min-width: 900px) {
   .about-section,
-  .contact-section {
+  .contact-section{
     padding: 4rem;
+    margin-bottom: 0;
+    margin-top: 6rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
   }
 
-  /* .tech-stack-section h3 {
-    padding-left: 4rem;
-    font-size: 1.8rem;
-  } */
-
-  .projects-section,
-  .contact-section {
-    padding: 25rem;
+  .projects-section {
+    padding: 4rem;
     padding-bottom: 5rem;
     padding-top: 0;
+    margin-left: 6rem;
+    margin-right: 3rem;
 
+  }
+
+  .about-section {
+    padding-bottom: 0;
   }
 
   .projects-section h1 {
     margin-top: 5rem;
   }
 
-  .project-container {
-    display: block;
-  }
-
   .project-image {
     display: block;
     width: 900px;
+  }
+
+  .tabs-wrapper h3 {
+    font-size: 1.8rem;
+    margin-left: 5rem;
+    padding-left: 5rem;
+    padding-right: 0;
+  }
+  
+  
+}
+
+@media(min-width: 1700px) {
+  .about-section,
+  .projects-section {
+    padding:15rem;
+    margin-bottom: 0;
+  }
+
+  .projects-section {
+    padding-top: 0;
+  }
+
+  .tabs-wrapper h3 {
+    font-size: 1.8rem;
+    margin-left: 5rem;
+    padding-left: 16.2rem;
+    padding-right: 0;
   }
   
 }
@@ -928,8 +998,7 @@ margin-left: 1.8rem;
 
 
   .about-section {
-    padding: 25rem;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     padding-top: 0;
   }
 
@@ -948,27 +1017,11 @@ margin-left: 1.8rem;
   }
 
   .column-tabs {
-    padding: 30rem;
-    padding-bottom: 5rem;
     padding-top: 0;
   }
 
-  /* .tech-stack-section h3 {
-    margin-left: 12rem;
-    font-size: 2rem;
-  } */
 
 }
-
-/* .tech-stack-section h3 {
-  font-size: 1.8rem;
-  font-family: "DM Sans";
-  text-align: left;
-  margin-left: 2rem;
-  margin-top: 0;
-  margin-bottom: 3rem;
- }
-  */
 
 
 .tabs-wrapper {
