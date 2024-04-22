@@ -5,7 +5,7 @@ import Hamburger from "./Hamburger";
 
 function Nav(props) {
   return (
-    <header>
+    <header id="home">
       <nav>
         <div className="title-and-logo">
         <Link to="/">

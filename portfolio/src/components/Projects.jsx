@@ -48,18 +48,30 @@ function Projects() {
   };
 
   return (
-    <div className="projects-section">
+    
+    <div className="projects-section" id="works">
       <div className="projects-description">
         <h1>Works</h1>
         <h3>On Gaining Experience</h3>
-        <p>
+        <h2>
           Working alongside others on web development projects has been an enriching experience,
           fostering collaboration and innovation. Through these collaborative efforts, I not only
           gained valuable insights into different approaches and techniques but also discovered a
           profound passion for JavaScript and React.js.
-        </p>
-      </div>
+        </h2>
 
+        <h2>
+          React's component-based architecture and declarative approach make building user interfaces
+          intuitive and enjoyable. The ability to efficiently manage state and create reusable components 
+          in React has significantly improved my productivity as a developer. Exploring React's ecosystem 
+          of libraries and tools has been both challenging and rewarding, providing endless opportunities 
+          to create dynamic and responsive web applications. Overall, React 
+          has made web development not only efficient but also fun and engaging.
+        </h2>
+        
+       
+       
+      </div>
       <div className={getProjectClass()}>
         {projects.map((project) => (
           <div key={project.id} className="project-item">

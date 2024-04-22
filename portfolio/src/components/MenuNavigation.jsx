@@ -71,7 +71,7 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </NavLink>
           <NavLink
             initial={false}
@@ -87,7 +87,7 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
-            <a href="#">Works</a>
+            <a href="#works">Works</a>
           </NavLink>
           <NavLink
             initial={false}
@@ -103,7 +103,7 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </NavLink>
           <NavLink
             initial={false}
@@ -119,7 +119,7 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </NavLink>
         </NavList>
       </NavMenuContainer>

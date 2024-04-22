@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import React from 'react';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import About from './components/About';
@@ -8,24 +8,19 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AboutTabs from './components/AboutTabs';
 
-// import APOD from './components/Apod';
-
 function App() {
-
-  const apiKey = 'k7Qr40gmaxGT8Ut3ms8YGLJPnpG85Ivzt2vYrM8C';
 
 
   return (
 
     <Router>
-      <div data-theme="light">
+      <div data-theme="light"> 
+    
       <div className="header-content">
         <Nav />
         <Home />
       </div>
       
-          
-        
         <About />
         <AboutTabs />
         <Projects />
