@@ -25,6 +25,7 @@ video {
 }
 
 
+
 :root {
   line-height: 1.5;
   color-scheme: light dark;
@@ -34,7 +35,11 @@ video {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Variables for toggling light mode */
+  --bg-color: linear-gradient(-85deg, #ffbaff, #ffffff);
 }
+
+
 
 
 body {
@@ -217,6 +222,7 @@ h2 {
   width: 100%;
   z-index: 1000;
   padding: 1rem;
+  position: fixed;
 }
 
 .menu-button {
@@ -391,8 +397,8 @@ h2 {
   background-image: linear-gradient(-85deg, #201420, #3a1f36, #000000);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.5;
-  animation: floatDown 40s linear 1.5s infinite alternate;
+  opacity: 0.7;
+  animation: floatDown 30s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 
@@ -406,22 +412,22 @@ h2 {
   background-image: linear-gradient(80deg, #b8369b, #ffd1b2);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.5;
-  animation: floatUp 40s linear 1.5s infinite alternate;
+  opacity: 0.7;
+  animation: floatUp 30s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 
 
 .left {
   position: absolute;
-  height: 250px;
-  width: 250px;
+  height: 350px;
+  width: 350px;
   border-radius: 50%;
-  background-image: linear-gradient(80deg, #7e36b8, #b2beff);
+  background-image: linear-gradient(80deg, #f86bec, #8587ff);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.5;
-  animation: floatLeft 40s linear 1.5s infinite alternate;
+  opacity: 0.7;
+  animation: floatLeft 30s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 
@@ -430,11 +436,11 @@ h2 {
   height: 350px;
   width: 350px;
   border-radius: 50%;
-  background-image: linear-gradient(80deg, #6be8f8, #8597ff);
+  background-image: linear-gradient(80deg, #f86bec, #8587ff);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.5;
-  animation: floatRight 40s linear 1.5s infinite alternate;
+  opacity: 0.7;
+  animation: floatRight 30s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 
@@ -443,22 +449,6 @@ h2 {
     top: -20%;
     left: 0;
   } 
-  15% {
-    top: 100px;
-    left: 100px;
-  } 
-  30% {
-    top: 300px;
-    left: 200px;
-  }
-  60% {
-    top: 500px;
-    left: 300px;
-  }
-  80% {
-    top: 600px;
-    left: 400px;
-  }
   100% {
     top: 500px;
     left: 300px;
@@ -467,24 +457,8 @@ h2 {
 
 @keyframes floatUp {
   0% {
-    bottom: -20%;
+    bottom: -10%;
     right: 0;
-  } 
-  15% {
-    bottom: 200px;
-    right: 250px;
-  } 
-  30% {
-    bottom: 400px;
-    right: 300px;
-  }
-  60% {
-    bottom: 600px;
-    right: 400px;
-  }
-  80% {
-    bottom: 700px;
-    right: 500px;
   }
   100% {
     bottom: 800px;
@@ -494,24 +468,8 @@ h2 {
 
 @keyframes floatLeft {
   0% {
-    bottom: -20%;
+    bottom: -10%;
     left: 0;
-  } 
-  15% {
-    bottom: 50px;
-    left: 70px;
-  } 
-  30% {
-    bottom: 150px;
-    left: 100px;
-  }
-  60% {
-    bottom: 350px;
-    left: 150px;
-  }
-  80% {
-    bottom: 300px;
-    left: 200px;
   }
   100% {
     bottom: 400px;
@@ -523,29 +481,12 @@ h2 {
   0% {
     top: -20%;
     right: 0;
-  } 
-  15% {
-    top: 60px;
-    right: 100px;
-  } 
-  30% {
-    top: 170px;
-    right: 190px;
-  }
-  60% {
-    top: 420px;
-    right: 230px;
-  }
-  80% {
-    top: 500px;
-    right: 400px;
   }
   100% {
-    top: 580px;
-    right: 460px;
+    top: 380px;
+    right: 400px;
   }
 }
-
 
 .apod-image {
   opacity: 100%;
@@ -586,10 +527,10 @@ h2 {
 .projects-title {
   text-transform: uppercase;
   font-size: 2rem;
-  margin-bottom: 0;
+  margin-bottom: 3.5rem;
   padding: 0;
   position: relative;
-  top: 7rem;
+  top: 9rem;
   font-weight: 600;
   font-family: "kingred";
 
@@ -621,7 +562,6 @@ h2 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 430px;
 }
 
 .project-image {
@@ -630,94 +570,116 @@ h2 {
   height: auto;
   padding: 0;
   opacity: 70%;
+  top: 4rem;
+  position: relative;
+  margin-bottom: 1rem;  
 }
 
 .projects-sub {
   font-size: 1.2rem;
   font-weight: 600;
   position: relative;
-  top: 21rem;
+  top: 6.7rem;
   padding: 0.6rem;
   border: none;
   color: #c9a4c7;
 }
 
-/* code via Nguyen Anh Tuan on codepen.io */
-.style-2 {
-  height: 30px;
-  align-items: center;
-  color: #ffffff;
+
+/* button code from Katherine Kato on codepen.io */
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
   text-decoration: none;
-  display: flex;
-  
-  .mask {
-    position: relative;
-    padding: 0;
-    height: 20px;
-    top: 1rem;
-    overflow: hidden;
-    .link-container {
-      transition: transform 0.4s ease;
-    }
-
-    .title {
-      display: block;
-      font-size: 17px;
-      line-height: 20px;
-      transition: transform 0.4s ease;
-    }
-
-    .link-title1 {
-      transform-origin: right center;
-      text-transform: uppercase;
-    }
-
-    .link-title2 {
-      transform-origin: left center;
-      transform: rotate(20deg);
-      text-transform: uppercase;
-    }
-  }
-  .link-icon {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background: #f8f8ff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    top: 1rem;
-    overflow: hidden;
-    .icon {
-      display: block;
-      position: absolute;
-      transition: transform 0.4s ease;
-      &:nth-child(2) {
-        transform: translate(-40px);
-      }
-    }
-  }
-  &:hover {
-    .link-container {
-      transform: translateY(-20px);
-    }
-    .link-title1 {
-      transform: rotate(20deg);
-    }
-    .link-title2 {
-      transform: rotate(0);
-    }
-    .icon:first-child {
-      transform: translate(40px);
-    }
-    .icon:nth-child(2) {
-      transform: translate(0px);
-    }
-  }
+  background: transparent;
+  padding: 0;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
+/* Learn more button */
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+/* Circle styles within learn-more button */
+button.learn-more .circle {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #c9a4c7;
+  border-radius: 1.625rem;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+/* Icon styles within circle */
+button.learn-more .circle .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+/* Arrow icon styles within circle */
+button.learn-more .circle .icon.arrow {
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+/* Button text styles within learn-more button */
+button.learn-more .button-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #696969;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+/* Hover styles for button */
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}
 
 .front-end-title {
   font-size: 0.7rem;
@@ -871,7 +833,7 @@ h2 {
 .highlighted-tab {
     color: black; 
     transform: scale(1.1);
-    transition: color 0.3s ease-out, transform 0.5s ease-out;
+    transition: color 0.3s ease-out, transform 0.3s ease-out;
     box-shadow: 0 0 10px rgba(245, 172, 233, 0.3); 
     animation: glow 1s infinite alternate; 
 }
@@ -898,7 +860,13 @@ h2 {
   display: inline-block;
   justify-content: center;
   align-items: center;
+  border: solid 1px #e29edf;
   text-align: center;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 30px;
+  box-shadow: 0 0 25px rgba(245, 172, 233, 0.3); 
 }
 
 .show-content{
@@ -922,18 +890,26 @@ h2 {
   }
 
   .projects-description h3,
-  .projects-description p {
+  .projects-description p{
     padding-left: 1rem;
   }
 }
 
 @media (min-width: 900px) {
-  .about-section,
-  .contact-section{
+  .about-section{
     padding: 4rem;
     margin-bottom: 0;
     margin-top: 6rem;
     margin-left: 6rem;
+    margin-right: 6rem;
+    
+  }
+
+  .contact-section {
+    padding: 4rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 7rem;
     margin-right: 6rem;
   }
 
@@ -942,7 +918,7 @@ h2 {
     padding-bottom: 5rem;
     padding-top: 0;
     margin-left: 6rem;
-    margin-right: 3rem;
+    margin-right: 6rem;
 
   }
 
@@ -970,10 +946,20 @@ h2 {
 }
 
 @media(min-width: 1700px) {
-  .about-section,
-  .projects-section {
+  .about-section{
     padding:15rem;
     margin-bottom: 0;
+  }
+
+  .projects-section {
+    padding:15rem;
+    padding-bottom: 0;
+  }
+
+  .contact-section-container {
+    padding-left: 11rem;
+    padding-right: 11rem;
+
   }
 
   .projects-section {
@@ -993,7 +979,7 @@ h2 {
 @media (min-width: 1300px) {
 
   .home-titles {
-    margin-top: 10rem;
+    margin-top: 18rem;
   }
 
 
@@ -1019,14 +1005,32 @@ h2 {
   .column-tabs {
     padding-top: 0;
   }
+  
+  .project-container-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .projects-sub {
+    top: 7.5rem;
+  }
 
-
+  .contact-section {
+    margin-left: 8rem;
+  }
 }
 
 
 .tabs-wrapper {
   padding: 10px;
   display: block;
+}
+
+.contact-section {
+  padding: 3rem;
 }
 
 .contact-section h1 {
@@ -1042,10 +1046,6 @@ h2 {
   font-size: 1.7rem;
   text-align: left;
   margin-top: 3rem;
-}
-
-.contact-section {
-  padding: 2rem;
 }
 
 .contact-section p {

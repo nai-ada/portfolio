@@ -18,14 +18,14 @@ function App() {
   return (
 
     <Router>
-      <div>
+      <div data-theme="light">
       <div className="header-content">
         <Nav />
         <Home />
       </div>
-      {/* <div className="App">
-          <APOD apiKey={apiKey} />
-        </div> */}
+      
+          
+        
         <About />
         <AboutTabs />
         <Projects />

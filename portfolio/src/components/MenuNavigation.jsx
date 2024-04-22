@@ -16,7 +16,7 @@ const NavList = styled.ul`
 `;
 
 const NavLink = styled(motion.li)`
-    font-weight: 200;
+    font-weight: 300;
     color: white;
     height: 60px;
     display: flex;
@@ -25,7 +25,7 @@ const NavLink = styled(motion.li)`
     cursor: pointer;
     line-height: 5rem;
     margin-top: 60px;
-    margin-left: 1.2rem;
+    margin-left: 2.2rem;
     text-transform: uppercase;
 
     a {
