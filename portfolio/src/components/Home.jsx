@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from "framer-motion";
+import {fadeIn} from '../index';
 
 function Home() {
 
@@ -16,9 +18,19 @@ function Home() {
 
       <div className="home-section">
         <div className="home-titles">
-        <h1 className="intro">Nadia</h1>
-        <h1 className="main-title">Vespalec.</h1>
-        <h2>Front-End Developer</h2>
+        <motion.h1 className="intro"
+        variants={fadeIn("right", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{once: false, amount: 0.7}}
+        >Nadia</motion.h1>
+        <motion.h1 className="main-title"
+        variants={fadeIn("left", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{once: false, amount: 0.7}}
+        >Vespalec.</motion.h1>
+        <h2>Front-End Developer & Designer.</h2>
         </div>
       </div>
     </>

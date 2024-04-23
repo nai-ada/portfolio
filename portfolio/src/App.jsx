@@ -10,7 +10,6 @@ import AboutTabs from './components/AboutTabs';
 
 function App() {
 
-
   return (
 
     <Router>

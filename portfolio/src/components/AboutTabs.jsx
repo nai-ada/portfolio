@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from "framer-motion";
+import {fadeIn} from '../index';
 import codingIcon from '/images/coding-icon.png';
 import designIcon from '/images/design-icon.png';
 import languageIcon from '/images/language-icon.png';
@@ -34,9 +36,23 @@ function AboutTabs() {
         
         <div className='tabs-wrapper'>
             
-            <h3>Some Things I'm Good At</h3>
+            <motion.h3
+            variants={fadeIn("up", 0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once: true, amount: 0.7}}
             
-            <div className='column-tabs'>
+            >Here Are Some Things I'm Good At.</motion.h3>
+            
+            <motion.div 
+            
+            variants={fadeIn("up", 0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once: true, amount: 0.7}}
+            
+            
+            className='column-tabs'>
                 <ul className='ul-tabs'>
                     <li className={`${toggle == 1 ? "highlighted-tab" : ""}`} onClick={()=>updateToggle(1)}><img src={languageIcon} alt="Icon to represent languages" className= "lang-icon"  width="40px"/></li>
                     <li className={`${toggle == 2 ? "highlighted-tab" : ""}`} onClick={()=>updateToggle(2)}><img src={codingIcon} alt="Icon to represent development tools" className="coding-icon" width="40px"/></li>
@@ -67,7 +83,7 @@ function AboutTabs() {
                     <h2>Hobbies</h2>
                     <p className='list-render'>{renderListItems(hobbies)}</p>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

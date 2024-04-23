@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
+import {fadeIn} from '../index';
 import galaxyImage from '/images/gg.png';
 import clipprImage from '/images/clippr.png';
 import frothImage from '/images/froth.png';
@@ -50,7 +52,14 @@ function Projects() {
   return (
     
     <div className="projects-section" id="works">
-      <div className="projects-description">
+      <motion.div 
+      
+      variants={fadeIn("up", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{once: true, amount: 0.7}}
+      
+      className="projects-description">
         <h1>Works</h1>
         <h3>On Gaining Experience</h3>
         <h2>
@@ -68,26 +77,36 @@ function Projects() {
           to create dynamic and responsive web applications. Overall, React 
           has made web development not only efficient but also fun and engaging.
         </h2>
-        
-       
-       
-      </div>
+      </motion.div>
+
       <div className={getProjectClass()}>
         {projects.map((project) => (
           <div key={project.id} className="project-item">
+            <motion.div
+            variants={fadeIn("up", 0.1)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once: true, amount: 0.7}}>
             <h3 className="projects-title">{project.name}</h3>
             <h2 className="projects-sub">{project.sub}</h2>
             <img src={project.imageUrl} alt={project.name} className="project-image" />
+            </motion.div>
 
         {/* button code from Katherine Kato on codepen.io */}
-            <div id="container">
+            <motion.div 
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once: true, amount: 0.7}}
+            
+            id="container">
                   <button class="learn-more">
                     <span class="circle" aria-hidden="true">
                       <span class="icon arrow"></span>
                     </span>
                     <span class="button-text">Learn More</span>
                   </button>
-              </div>
+              </motion.div>
            
           </div>
         ))}
