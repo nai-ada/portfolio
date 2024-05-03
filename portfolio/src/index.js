@@ -22,7 +22,7 @@ function fadeInShapes() {
   const shapes = document.querySelectorAll(".animated-shape");
   shapes.forEach((shape, index) => {
     setTimeout(() => {
-      shape.style.opacity = "0.2"; // Set the desired opacity
+      shape.style.opacity = "0.3"; // Set the desired opacity
     }, index * 1000); // Delay each shape to create a staggered effect
   });
 }
@@ -46,7 +46,7 @@ export const fadeIn = (direction, delay) => {
       opacity: 1,
       transition: {
         type: "fadeIn",
-        duration: 1.2,
+        duration: 0.8,
         delay: delay,
         ease: [0.25, 0.25, 0.25, 0.75],
       },

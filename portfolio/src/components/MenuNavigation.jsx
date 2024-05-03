@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import { Link as ScrollLink } from 'react-scroll';
 import styled from "styled-components";
 
 const NavMenuContainer = styled.div`
@@ -71,7 +72,15 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
-            <a href="#home">Home</a>
+
+          <ScrollLink
+              to="home"
+              smooth={true}
+              duration={1100}
+            >
+              <a href="#home">Home</a>
+            </ScrollLink>
+            
           </NavLink>
           <NavLink
             initial={false}
@@ -87,7 +96,14 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
+            <ScrollLink
+              to="works"
+              smooth={true}
+              duration={1100}
+            >
             <a href="#works">Works</a>
+            </ScrollLink>
+
           </NavLink>
           <NavLink
             initial={false}
@@ -103,7 +119,15 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
+
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={1100}
+            >
             <a href="#about">About</a>
+            </ScrollLink>
+
           </NavLink>
           <NavLink
             initial={false}
@@ -119,7 +143,13 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={1100}
+            >
             <a href="#contact">Contact</a>
+            </ScrollLink>
           </NavLink>
         </NavList>
       </NavMenuContainer>

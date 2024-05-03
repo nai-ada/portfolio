@@ -30,7 +30,7 @@ function Footer() {
       </div>
 
       <div className="email-container">
-        <a href="mailto:nadiavespalec00@gmail.com" className="email-link">Copy email</a>
+        <a href="mailto:nadiavespalec00@gmail.com" className="email-link">Send me an email</a>
         <img src={heartImage} alt="heart" className="heart-image" width="25px" />
       </div>
       <p className="copyright">&copy; Nadia Vespalec 2024</p>
@@ -40,4 +40,3 @@ function Footer() {
 }
 
 export default Footer;
-

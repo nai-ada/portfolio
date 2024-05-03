@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import {fadeIn} from '../index';
+import { Link } from 'react-router-dom';
 import galaxyImage from '/images/gg.png';
 import clipprImage from '/images/clippr.png';
 import frothImage from '/images/froth.png';
@@ -10,19 +11,23 @@ const projects = [
     name: 'Froth Matcha.',
     imageUrl: frothImage,
     sub: 'WordPress | PHP',
-    id: '1'
+    id: '1',
+    link: '/froth'
+    
   },
   {
     name: 'Galaxy Grid.',
     imageUrl: galaxyImage,
     sub: 'JavaScript | CSS',
-    id: '2'
+    id: '2',
+    link: '/galaxy-grid'
   },
   {
     name: 'Clippr DB.',
     imageUrl: clipprImage,
     sub: 'React.js | SASS',
-    id: '3'
+    id: '3',
+    link: '/clippr'
   }
 ];
 
@@ -54,7 +59,7 @@ function Projects() {
     <div className="projects-section" id="works">
       <motion.div 
       
-      variants={fadeIn("up", 0.1)}
+      variants={fadeIn("up", 0.2)}
         initial="hidden"
         whileInView={"show"}
         viewport={{once: true, amount: 0.7}}
@@ -83,7 +88,7 @@ function Projects() {
         {projects.map((project) => (
           <div key={project.id} className="project-item">
             <motion.div
-            variants={fadeIn("up", 0.1)}
+            variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView={"show"}
             viewport={{once: true, amount: 0.7}}>
@@ -100,12 +105,14 @@ function Projects() {
             viewport={{once: true, amount: 0.7}}
             
             id="container">
+              <Link to={project.link}>
                   <button class="learn-more">
                     <span class="circle" aria-hidden="true">
                       <span class="icon arrow"></span>
                     </span>
                     <span class="button-text">Learn More</span>
                   </button>
+              </Link>
               </motion.div>
            
           </div>
@@ -116,3 +123,5 @@ function Projects() {
 }
 
 export default Projects;
+
+

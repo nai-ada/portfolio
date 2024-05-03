@@ -37,16 +37,16 @@ function AboutTabs() {
         <div className='tabs-wrapper'>
             
             <motion.h3
-            variants={fadeIn("up", 0.1)}
+            variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView={"show"}
             viewport={{once: true, amount: 0.7}}
             
-            >Here Are Some Things I'm Good At.</motion.h3>
+            >Some Things I'm Good At</motion.h3>
             
             <motion.div 
             
-            variants={fadeIn("up", 0.1)}
+            variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView={"show"}
             viewport={{once: true, amount: 0.7}}
@@ -89,5 +89,4 @@ function AboutTabs() {
 }
 
 export default AboutTabs;
-
 

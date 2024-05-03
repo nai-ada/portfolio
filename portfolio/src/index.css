@@ -402,14 +402,12 @@ h2 {
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  background-image: linear-gradient(-85deg, #201420, #3a1f36, #000000);
+  background-image: linear-gradient(-85deg, #b946b9, #a54395);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.7;
   animation: floatDown 30s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
-
 
 .down {
   position: absolute;
@@ -420,7 +418,6 @@ h2 {
   background-image: linear-gradient(80deg, #b8369b, #ffd1b2);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.7;
   animation: floatUp 30s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
@@ -431,10 +428,9 @@ h2 {
   height: 350px;
   width: 350px;
   border-radius: 50%;
-  background-image: linear-gradient(80deg, #f86bec, #8587ff);
+  background-image: linear-gradient(80deg, #c271bb, #85a2ff);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.7;
   animation: floatLeft 30s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
@@ -447,15 +443,14 @@ h2 {
   background-image: linear-gradient(80deg, #f86bec, #8587ff);
   filter: blur(90px);
   z-index: -5;
-  opacity: 0.7;
   animation: floatRight 30s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
 
 @keyframes floatDown {
   0% {
-    top: -20%;
-    left: 0;
+    top: 40%; 
+    left: 80%; 
   } 
   100% {
     top: 500px;
@@ -465,19 +460,19 @@ h2 {
 
 @keyframes floatUp {
   0% {
-    bottom: -10%;
-    right: 0;
+    bottom: 80%; 
+    right: 70%; 
   }
   100% {
     bottom: 800px;
-    right: 700px;
+    right: 400px;
   }
 }
 
 @keyframes floatLeft {
   0% {
-    bottom: -10%;
-    left: 0;
+    bottom: 60%;
+    left: 0%;
   }
   100% {
     bottom: 400px;
@@ -487,14 +482,15 @@ h2 {
 
 @keyframes floatRight {
   0% {
-    top: -20%;
-    right: 0;
+    top: 70%; 
+    right: 20%; 
   }
   100% {
     top: 380px;
     right: 400px;
   }
 }
+
 
 .apod-image {
   opacity: 100%;
