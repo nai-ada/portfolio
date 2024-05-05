@@ -61,25 +61,30 @@ function AboutTabs() {
                     <li className={`${toggle == 5 ? "highlighted-tab" : ""}`} onClick={()=>updateToggle(5)}><img src={starIcon} alt="Icon to represent hobbies" className= "star-icon" width="40px"/></li>
                 </ul>
 
-                <div className={toggle === 1 ? "show-content" : "tabs-content"}>
+
+                <div className={`tabs-content ${toggle === 1 && "show-content"} `}>
                     <h2>Languages</h2>
                     <p className='list-render'>{renderListItems(languages)}</p>
                 </div>
 
-                <div className={toggle === 2 ? "show-content" : "tabs-content"}>
+                <div className={`tabs-content ${toggle === 2 && "show-content"} `}>
+
                     <h2>Development Tools</h2>
                     <p className='list-render'>{renderListItems(developmentTools)}</p>
                 </div>
 
-                <div className={toggle === 3 ? "show-content" : "tabs-content"}>
+                <div className={`tabs-content ${toggle === 3 && "show-content"} `}>
+
                     <h2>Design Tools</h2>
                     <p className='list-render'>{renderListItems(designTools)}</p>
                 </div>
-                <div className={toggle === 4 ? "show-content" : "tabs-content"}>
+                <div className={`tabs-content ${toggle === 4 && "show-content"} `}>
+
                     <h2>Video Games</h2>
                     <p className='list-render'>{renderListItems(videoGames)}</p>
                 </div>
-                <div className={toggle === 5 ? "show-content" : "tabs-content"}>
+                <div className={`tabs-content ${toggle === 5 && "show-content"} `}>
+
                     <h2>Hobbies</h2>
                     <p className='list-render'>{renderListItems(hobbies)}</p>
                 </div>

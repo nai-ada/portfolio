@@ -14,7 +14,7 @@ function App() {
   
       <div data-theme="light"> 
     
-      <div className="header-content">
+      <div className="header-content" id="home">
         <Nav />
         <Home />
       </div>
@@ -25,15 +25,6 @@ function App() {
         <Contact />
         <Footer />
 
-        {/* <Routes>
-          <Route exact path="/" element={<Home />} />
-
-          <Route exact path="/about" element={<About />} />
-
-          <Route exact path="/projects" element={<Projects />} />
-
-          <Route exact path="/contact" element={<Contact />} />
-        </Routes> */}
       </div>
   
   );

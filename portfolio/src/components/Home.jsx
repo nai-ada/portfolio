@@ -10,10 +10,7 @@ function Home() {
     <section id="down" className="animated-shape down"></section>
     <section id="left" className="animated-shape left"></section>
     <section id="right" className="animated-shape right"></section>
-    <section id="up-2" className="animated-shape up-2"></section>
-    <section id="down-2" className="animated-shape down-2"></section>
-    <section id="left-2" className="animated-shape left-2"></section>
-    <section id="right-2" className="animated-shape right-2 "></section>
+    
     
 
       <div className="home-section">

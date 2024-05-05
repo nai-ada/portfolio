@@ -409,6 +409,8 @@ h2 {
   animation-fill-mode: forwards;
 }
 
+
+
 .down {
   position: absolute;
   height: 350px;
@@ -423,6 +425,8 @@ h2 {
 }
 
 
+
+
 .left {
   position: absolute;
   height: 350px;
@@ -435,6 +439,7 @@ h2 {
   animation-fill-mode: forwards;
 }
 
+
 .right {
   position: absolute;
   height: 350px;
@@ -446,6 +451,9 @@ h2 {
   animation: floatRight 30s linear 1.5s infinite alternate;
   animation-fill-mode: forwards;
 }
+
+
+
 
 @keyframes floatDown {
   0% {
@@ -918,7 +926,6 @@ button:hover .button-text {
     margin-top: 0;
     margin-left: 7rem;
     margin-right: 6rem;
-    margin-top: 8rem;
   }
 
   .projects-section {
@@ -1087,4 +1094,418 @@ button:hover .button-text {
   overflow: hidden;
 }
 
+.card-image  {
 
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  height: 20%;
+  width: 20%;
+}
+
+.project-image-for-page {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding: 0;
+  opacity: 90%;
+  top: 5rem;
+  position: relative;
+  margin-bottom: 0.5rem;  
+}
+
+.projects-footer {
+  margin-top: 15rem;
+}
+
+.gg-intro {
+  
+    font-size: 3.2rem;
+    padding: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-family: "kingred";
+    letter-spacing: 5px;
+    color: #ffffff;
+    margin-top: 8rem;
+    text-align: center;
+  
+}
+
+.copyright {
+background-color: rgba(58, 36, 61, 0.404);
+padding: 2rem;
+height: 100%;
+margin: 0;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  padding: 1rem;
+  padding-top: 4rem;
+}
+
+.video-container video {
+  max-width: 100%;
+}
+
+
+
+.project-section-heading-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%; 
+ }
+
+ .up-arrow {
+  margin-left:0.8rem; /* Adjust margin as needed */
+  margin-bottom: 0.2rem;
+}
+ 
+ .project-section-heading,
+ .project-section-heading-tools {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  
+ }
+
+ .project-section-heading-demo {
+  font-size: 1.5rem;
+  text-align: center;
+
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 3rem;
+ }
+
+ .project-section-heading:hover,
+ .project-section-heading:focus
+ {
+  color: #e29edf;
+ }
+ 
+ .project-icons {
+  filter: invert(100%);
+  width: 7%;
+  display: inline;
+  padding-left: 0.5rem;
+ }
+
+ .project-info-section {
+  padding: 3rem;
+ }
+
+ .project-page-description {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #e29edf;
+        text-align: center;
+        padding-bottom: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        border-radius: 30px;
+        box-shadow: 0 0 25px rgba(245, 172, 233, 0.3);
+        margin: 1rem;
+ }
+
+ .tools-list-render {
+  filter: invert(90%);
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+
+.tool-icon {
+ 
+  max-width: 60%; /* Set maximum width for flexibility */
+}
+
+.project-container h1 {
+  margin: 0;
+  margin-top: 10rem;
+}
+
+.live-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* Adjust top margin as needed */
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.project-item img {
+  width: 100%; /* Adjust based on your layout needs */
+  max-width: 400px; /* Optional: Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+ }
+
+.project-info-h2 {
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
+  font-weight: 400;
+  margin-top:0;
+  margin-bottom: 0;
+}
+
+.project-item {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  
+
+}
+
+
+@media (min-width: 500px) {
+  .tool-icon {
+    max-width: 40%; /* Adjust the maximum width for larger screens */
+  }
+
+  .gg-intro {
+    font-size:3.7rem;
+  }
+
+}
+
+@media (min-width: 800px) {
+  .gg-intro {
+    font-size: 4.2rem;
+  }
+  
+  .video-container {
+    padding: 5rem;
+    padding-top: 5rem;
+
+    
+  }
+
+  .project-page-description {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .project-section-heading,
+  .project-section-heading-tools,
+  .project-section-heading-demo {
+    font-size: 1.8rem;
+
+    
+   }
+}
+
+@media (min-width: 900px) {
+  .tool-icon {
+    max-width: 30%; /* Adjust the maximum width for even larger screens */
+    margin-right: 0;
+  }
+
+  .video-container {
+    padding: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .tools-list-render {
+    margin: 5rem; /* Adjust margin for the tools list */
+  }
+
+  .gg-intro {
+    font-size: 5rem;
+  }
+
+  .project-page-description {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+
+  
+}
+
+@media (min-width: 1100px) {
+  .project-page-description {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+
+  .video-container {
+    padding: 15rem;
+   padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+}
+
+@media (min-width: 1300px) {
+  .video-container {
+    padding: 15rem;
+   padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .gg-intro {
+    
+    margin-top: 3rem;
+  }
+
+  .project-item {
+    margin-bottom: 10rem;
+  }
+  
+}
+
+@media (min-width: 1600px) {
+  .video-container {
+    padding: 25rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .project-page-description {
+    margin-left: 25rem;
+    margin-right: 25rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .video-container {
+    padding: 38rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+  }
+
+  .project-page-description {
+    margin-left: 35rem;
+    margin-right: 35rem;
+  }
+}
+
+.project-page-gradient {
+  position: absolute;
+  top: 220%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(120deg, #2db2ff, #be31ff); 
+  filter: blur(90px);
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 250px;
+  height: 250px;
+  z-index: -5;
+}
+
+@media (min-width: 550px) {
+
+.project-page-gradient {
+  
+  top: 210%;
+  
+}
+
+
+
+}
+
+@media (min-width: 700px) {
+
+  .project-page-gradient {
+    
+    top: 200%;
+    
+  }
+  
+  
+  
+  }
+
+
+  @media (min-width: 800px) {
+
+    .project-page-gradient {
+      
+      top: 180%;
+      
+    }
+    
+    
+    
+    }
+  
+
+  @media (min-width: 900px) {
+
+    .project-page-gradient {
+      
+      top: 185%;
+      width: 350px;
+      height: 350px;
+    }
+    
+    
+    
+    }
+
+    
+  @media (min-width: 1300px) {
+
+    .project-page-gradient {
+     
+      top: 190%;
+     
+    }
+    
+    
+    
+    }
+
+    @media (min-width: 1800px) {
+
+      .project-page-gradient {
+       
+        top: 180%;
+        
+      }
+       
+      }
+  
+  
+
+@media (min-width: 1900px) {
+
+  .project-page-gradient {
+    width: 400px;
+    height: 400px;
+    top: 200%;
+    
+  }
+  
+ 
+  
+  }
+  
+  
+ .project-container-grid-page {
+    padding: 10rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+  }

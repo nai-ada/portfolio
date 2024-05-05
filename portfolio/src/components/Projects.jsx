@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import {fadeIn} from '../index';
 import { Link } from 'react-router-dom';
 import galaxyImage from '/images/gg.png';
-import clipprImage from '/images/clippr.png';
-import frothImage from '/images/froth.png';
+import clipprImage from '/images/clippr-coming-soon.png';
+import frothImage from '/images/froth-coming-soon.png';
 
 const projects = [
   {
@@ -12,7 +12,7 @@ const projects = [
     imageUrl: frothImage,
     sub: 'WordPress | PHP',
     id: '1',
-    link: '/froth'
+    // link: '/froth'
     
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     imageUrl: clipprImage,
     sub: 'React.js | SASS',
     id: '3',
-    link: '/clippr'
+    // link: '/clippr'
   }
 ];
 
@@ -95,16 +95,10 @@ function Projects() {
             <h3 className="projects-title">{project.name}</h3>
             <h2 className="projects-sub">{project.sub}</h2>
             <img src={project.imageUrl} alt={project.name} className="project-image" />
-            </motion.div>
+            
 
         {/* button code from Katherine Kato on codepen.io */}
-            <motion.div 
-            variants={fadeIn("up", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{once: true, amount: 0.7}}
-            
-            id="container">
+            <div id="container">
               <Link to={project.link}>
                   <button class="learn-more">
                     <span class="circle" aria-hidden="true">
@@ -113,8 +107,8 @@ function Projects() {
                     <span class="button-text">Learn More</span>
                   </button>
               </Link>
-              </motion.div>
-           
+              </div>
+           </motion.div>
           </div>
         ))}
       </div>
