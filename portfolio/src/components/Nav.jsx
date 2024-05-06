@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logoImage from '/images/nadia-logo.png';
 import Hamburger from "./Hamburger";
 
-function Nav(props) {
+function Nav() {
   return (
     <header id="home">
       <nav>

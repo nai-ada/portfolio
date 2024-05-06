@@ -16,13 +16,13 @@ function Footer() {
           className="social-icon"
         />
         <SocialMediaLink
-          url="https://github.com/"
+          url="https://github.com/nai-ada"
           imageUrl={githubLogo}
           altText="GitHub Logo"
           className="social-icon"
         />
         <SocialMediaLink
-          url="https://www.linkedin.com/"
+          url="https://linkedin.com/in/nadiavespalec"
           imageUrl={linkedinLogo}
           altText="LinkedIn Logo"
           className="social-icon"
@@ -33,6 +33,7 @@ function Footer() {
         <a href="mailto:nadiavespalec00@gmail.com" className="email-link">Send me an email</a>
         <img src={heartImage} alt="heart" className="heart-image" width="25px" />
       </div>
+      
       <p className="copyright">&copy; Nadia Vespalec 2024</p>
       
     </div>

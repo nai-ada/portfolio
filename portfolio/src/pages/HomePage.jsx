@@ -11,14 +11,13 @@ function App() {
 
   return (
 
-  
       <div data-theme="light"> 
     
       <div className="header-content" id="home">
         <Nav />
         <Home />
       </div>
-      
+
         <About />
         <AboutTabs />
         <Projects />
@@ -26,7 +25,6 @@ function App() {
         <Footer />
 
       </div>
-  
   );
 }
 

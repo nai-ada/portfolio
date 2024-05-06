@@ -1,4 +1,4 @@
-//  code for custom cursor
+//  Custom cursor
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline");
 
@@ -18,21 +18,7 @@ window.addEventListener("mousemove", function (e) {
   );
 });
 
-function fadeInShapes() {
-  const shapes = document.querySelectorAll(".animated-shape");
-  shapes.forEach((shape, index) => {
-    setTimeout(() => {
-      shape.style.opacity = "0.6"; // Set the desired opacity
-    }, index * 1000); // Delay each shape to create a staggered effect
-  });
-}
-
-// Trigger the fade-in effect when the page fully loads
-// window.addEventListener("load", () => {
-//   fadeInShapes();
-// });
-
-// scrolling animations
+// Fading scrolling animations
 export const fadeIn = (direction, delay) => {
   return {
     hidden: {

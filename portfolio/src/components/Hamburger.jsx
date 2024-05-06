@@ -8,13 +8,6 @@ const HamburgerMenuContainer = styled.div`
  display: flex;
 `;
 
-const HamburgerIcon = styled.div`
- color: ${({ reverseColor }) => reverseColor ? "#000" : "#fff"};
- cursor: pointer;
- z-index: 1500;
- transition: all 250ms ease-in-out;
-`;
-
 const MenuContainer = styled(motion.div)`
  width: 100%;
  max-width: 25%;
@@ -44,7 +37,7 @@ const menuVariants = {
 
 const menuTransition = { type: "spring", duration: 0.5, stiffness: 33, delay: 0.07 };
 
-function Hamburger(props) {
+function Hamburger() {
  const [isOpen, setIsOpen] = React.useState(false);
 
  const toggle = () => {

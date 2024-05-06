@@ -82,29 +82,8 @@ function MenuNavigation({ isOpen }) {
             </ScrollLink>
             
           </NavLink>
-          <NavLink
-            initial={false}
-            animate={isOpen ? "show" : "hide"}
-            variants={{
-              show: {
-                ...variants.show,
-                transition: { delay: 0.4, duration: 0.2 },
-              },
-              hide: {
-                ...variants.hide,  
-                transition: { delay: 0.01, duration: 0.05 },
-              },
-            }}
-          >
-            <ScrollLink
-              to="works"
-              smooth={true}
-              duration={1100}
-            >
-            <a href="#works">Works</a>
-            </ScrollLink>
-
-          </NavLink>
+          
+          
           <NavLink
             initial={false}
             animate={isOpen ? "show" : "hide"}
@@ -129,6 +108,30 @@ function MenuNavigation({ isOpen }) {
             </ScrollLink>
 
           </NavLink>
+          <NavLink
+            initial={false}
+            animate={isOpen ? "show" : "hide"}
+            variants={{
+              show: {
+                ...variants.show,
+                transition: { delay: 0.4, duration: 0.2 },
+              },
+              hide: {
+                ...variants.hide,  
+                transition: { delay: 0.01, duration: 0.05 },
+              },
+            }}
+          >
+            <ScrollLink
+              to="works"
+              smooth={true}
+              duration={1100}
+            >
+            <a href="#works">Works</a>
+            </ScrollLink>
+
+          </NavLink>
+          
           <NavLink
             initial={false}
             animate={isOpen ? "show" : "hide"}

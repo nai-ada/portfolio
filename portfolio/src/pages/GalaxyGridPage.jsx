@@ -2,14 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { fadeIn } from '../index'; 
 import { Link } from 'react-router-dom'; 
-import figmaIcon from '/images/figma-icon.png';
-import jsIcon from '/images/javascript-icon.png';
-import htmlIcon from '/images/html-icon.png';
-import cssIcon from '/images/css-icon.png';
 import galaxyVid from '/media/galaxy-grid-gameplay.mp4';
-import galaxyCode from '/images/galaxy-grid-code.png';
 import ProjectNav from '../components/ProjectNav';
-import Footer from '../components/Footer';
 import ggHome from '/images/gg-home.png';
 import ggPlayer from '/images/gg-player.png';
 import ggCpu from '/images/gg-cpu.png';
@@ -17,13 +11,10 @@ import upArrow from '/images/up-arrow.png';
 import downArrow from '/images/down-arrow.png';
 
 
-
-
-
 const GalaxyGridPage = () => {
-  const [showTools, setShowTools] = useState(true);
-  const [showOverview, setShowOverview] = useState(true);
-  const [showTakeaway, setShowTakeaway] = useState(true);
+
+  const [showOverview, setShowOverview] = useState(false);
+  const [showTakeaway, setShowTakeaway] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -37,7 +28,6 @@ const GalaxyGridPage = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
 
   const projects = [
     { imageUrl: ggHome, id: '1', info: 'Game Home Screen. This is where the fun begins.' },
@@ -69,22 +59,18 @@ const GalaxyGridPage = () => {
     },
   };
   
-  
-
   const getProjectClass = () => {
     return screenWidth >= 1300 ? 'project-container-grid-page' : 'project-container';
   };
 
   return (
     
-    
     <div id="project-page-top">
-    <div className='project-page-gradient'></div>
       <ProjectNav />
     
       <div className="galaxy-grid-page">
-        <div className="content-container"> {/* Container for page content */}
-          <h1 className="gg-intro">Galaxy Grid</h1>
+        <div className="content-container">
+          <h1 className="gg-intro">Galaxy Grid.</h1>
           <Link to="#" className="live-button">
             <button className="learn-more">
               <span className="circle" aria-hidden="true">
@@ -93,7 +79,6 @@ const GalaxyGridPage = () => {
               <span className="button-text">Visit Live Site</span>
             </button>
           </Link>
-
           
       </div>
           <div id="project-info-section">
@@ -115,7 +100,6 @@ const GalaxyGridPage = () => {
             </motion.div>
             </motion.div>
 
-
             <motion.div variants={fadeIn("up", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: true, amount: 0.7 }}>
               <h3 style={{ cursor: 'pointer' }} className="project-section-heading-demo">
                 Functionality Demo
@@ -136,20 +120,12 @@ const GalaxyGridPage = () => {
               <img src={showTakeaway ? upArrow : downArrow} alt="arrow" className="up-arrow" width="28px"/>
             </div>
             <motion.div variants={dropdownVariants} initial="show" animate={showTakeaway ? "show" : "hide"}>
-              
                 <h2 className="project-page-description">
                   Through the development process of Galaxy Grid, I gained invaluable insights into JavaScript, deepening my understanding of its core concepts and functionalities. From implementing game logic to handling user interactions, every aspect of the project served as a learning opportunity, honing my problem-solving skills and strengthening my grasp of JavaScript programming.
                 </h2>
-              
             </motion.div>
             </motion.div>
           </div>
-            
-            
-
-          
-          
-         
           
           <motion.div variants={fadeIn("up", 0.2)} initial="hidden" whileInView={"show"} viewport={{ once: true, amount: 0.7 }}>
           <h3 style={{ cursor: 'pointer' }} className="project-section-heading-tools">
@@ -158,8 +134,6 @@ const GalaxyGridPage = () => {
               <h2 className='tools-used-render'>{renderListItems(toolsUsed)}</h2>
           </motion.div>
           
-          
-
           <div className={getProjectClass()}>
             {projects.map((project) => (
               <div key={project.id} className="project-item">
@@ -171,10 +145,10 @@ const GalaxyGridPage = () => {
             ))}
           </div>
         </div> 
+
         <p className="copyright">&copy; Nadia Vespalec 2024</p>
+
       </div>
-    
-   
     
   );
 };

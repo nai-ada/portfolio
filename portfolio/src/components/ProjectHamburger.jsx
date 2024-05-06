@@ -12,13 +12,6 @@ const HamburgerMenuContainer = styled.div`
  z-index: 1500; 
 `;
 
-const HamburgerIcon = styled.div`
- color: ${({ reverseColor }) => reverseColor ? "#000" : "#fff"};
- cursor: pointer;
- z-index: 1500;
- transition: all 250ms ease-in-out;
-`;
-
 const MenuContainer = styled(motion.div)`
  width: 100%;
  max-width: 25%;

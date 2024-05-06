@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logoImage from '/images/nadia-logo.png';
 import ProjectHamburger from "./ProjectHamburger";
 
-function ProjectNav(props) {
+function ProjectNav() {
   return (
     <header id="home">
       <nav>
@@ -14,7 +14,8 @@ function ProjectNav(props) {
         <p className='front-end-title'>| Web Design + Development</p>
         </div>
         <div className="menu-nav-header">
-        {/* <ProjectHamburger/> */}
+          {/* Hamburger can be used as an alternative to revisit other parts of the site, without having to click on the logo to go back home. */}
+          {/* <ProjectHamburger/> */}
         </div>
       </nav>
     </header>
