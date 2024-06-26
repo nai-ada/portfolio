@@ -71,7 +71,7 @@ const GalaxyGridPage = () => {
       <div className="galaxy-grid-page">
         <div className="content-container">
           <h1 className="gg-intro">Galaxy Grid.</h1>
-          <Link to="#" className="live-button">
+          <Link to="/galaxy-grid/index.html" className="live-button">
             <button className="learn-more">
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow"></span>

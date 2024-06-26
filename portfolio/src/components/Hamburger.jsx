@@ -44,11 +44,15 @@ function Hamburger() {
     setIsOpen(!isOpen);
  };
 
+ const handleLinkClick = () => {
+    setIsOpen(false);
+ };
+
  return (
     <HamburgerMenuContainer>
       <MenuToggle toggle={toggle} isOpen={isOpen} />
         <MenuContainer initial={false} animate={isOpen ? "open" : "closed"} variants={menuVariants} transition={menuTransition}>
-          <MenuNavigation isOpen={isOpen}/>
+          <MenuNavigation isOpen={isOpen} onLinkClick={handleLinkClick}/>
         </MenuContainer>
     </HamburgerMenuContainer>
  );

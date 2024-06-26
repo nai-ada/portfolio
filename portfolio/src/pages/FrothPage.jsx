@@ -74,7 +74,7 @@ const FrothPage = () => {
       <div className="galaxy-grid-page">
         <div className="content-container">
           <h1 className="gg-intro">Froth Matcha.</h1>
-          <Link to="#" className="live-button">
+          <Link to="https://matchacafe.bcitwebdeveloper.ca/" className="live-button">
             <button className="learn-more">
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow"></span>

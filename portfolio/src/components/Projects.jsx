@@ -13,7 +13,7 @@ const projects = [
     imageUrl: frothImage,
     sub: 'WordPress | PHP',
     id: '1',
-    link: '/froth'
+    link: '/froth-info'
     
   },
   {
@@ -21,14 +21,14 @@ const projects = [
     imageUrl: galaxyImage,
     sub: 'JavaScript | CSS',
     id: '2',
-    link: '/galaxy-grid'
+    link: '/galaxy-grid-info'
   },
   {
     name: 'Clippr DB.',
     imageUrl: clipprImage,
     sub: 'React.js | SASS',
     id: '3',
-    link: '/clippr'
+    link: '/clippr-info'
   }
 ];
 
@@ -70,19 +70,13 @@ function Projects() {
       <h1>Works</h1>
         <h3>On Gaining Experience</h3>
           <h2>
-            Working alongside others on web development projects has been an enriching experience,
-            fostering collaboration and innovation. Through these collaborative efforts, I not only
-            gained valuable insights into different approaches and techniques but also discovered a
-            profound passion for JavaScript and React.js.
-          </h2>
-
-          <h2>
-            React's component-based architecture and declarative approach make building user interfaces
-            intuitive and enjoyable. The ability to efficiently manage state and create reusable components 
-            in React has significantly improved my productivity as a developer. Exploring React's ecosystem 
-            of libraries and tools has been both challenging and rewarding, providing endless opportunities 
-            to create dynamic and responsive web applications. Overall, React 
-            has made web development not only efficient but also fun and engaging.
+          Working on web development projects with others has been an enriching experience, and I am grateful for the opportunity 
+          I had to participate in an invaluable program at BCIT. This program allowed me to thrive in both collaborative and 
+          independent environments, providing me with real-world problem-solving skills that I am eager to utilize. I not only 
+          gained valuable insights into different approaches and techniques but also discovered a profound passion for JavaScript 
+          and frameworks such as React.js. I look forward to further expanding my knowledge of JavaScript and its libraries and 
+          frameworks, such as Three.js and GSAP. I am enthusiastic about learning creative programming, as I love to approach web 
+          development as an art form.
           </h2>
       </motion.div>
 

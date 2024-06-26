@@ -54,7 +54,7 @@ const variants = {
     }
 }
 
-function MenuNavigation({ isOpen }) {
+function MenuNavigation({ isOpen, onLinkClick }) {
     return (
       <NavMenuContainer>
         <NavList>
@@ -72,17 +72,15 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
-
-          <ScrollLink
+            <ScrollLink
               to="home"
               smooth={true}
               duration={1100}
+              onClick={onLinkClick}
             >
               <a href="#home">Home</a>
             </ScrollLink>
-            
           </NavLink>
-          
           
           <NavLink
             initial={false}
@@ -98,16 +96,16 @@ function MenuNavigation({ isOpen }) {
               },
             }}
           >
-
             <ScrollLink
               to="about"
               smooth={true}
               duration={1100}
+              onClick={onLinkClick}
             >
-            <a href="#about">About</a>
+              <a href="#about">About</a>
             </ScrollLink>
-
           </NavLink>
+          
           <NavLink
             initial={false}
             animate={isOpen ? "show" : "hide"}
@@ -126,10 +124,10 @@ function MenuNavigation({ isOpen }) {
               to="works"
               smooth={true}
               duration={1100}
+              onClick={onLinkClick}
             >
-            <a href="#works">Works</a>
+              <a href="#works">Works</a>
             </ScrollLink>
-
           </NavLink>
           
           <NavLink
@@ -150,14 +148,14 @@ function MenuNavigation({ isOpen }) {
               to="contact"
               smooth={true}
               duration={1100}
+              onClick={onLinkClick}
             >
-            <a href="#contact">Contact</a>
+              <a href="#contact">Contact</a>
             </ScrollLink>
           </NavLink>
         </NavList>
       </NavMenuContainer>
     );
-  }
-  
+}
 
 export default MenuNavigation;

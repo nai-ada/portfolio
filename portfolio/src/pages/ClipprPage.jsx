@@ -71,7 +71,7 @@ const ClipprPage = () => {
       <div className="galaxy-grid-page">
         <div className="content-container">
           <h1 className="gg-intro">Clippr DB.</h1>
-          <Link to="#" className="live-button">
+          <Link to="/clippr-database/clippr-home" className="live-button">
             <button className="learn-more">
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow"></span>
