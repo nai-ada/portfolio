@@ -6,7 +6,10 @@ function NotFound() {
     <div className="error">
       <h1 className="error-num">404.</h1>
       <h1>Page Not Found</h1>
-      <p>Uh oh! To load the content, try refreshing the page once.</p>
+      <p>
+        Uh oh, looks like something's wrong. Try refreshing the page once to
+        load content.
+      </p>
       <Link to="/" className="error-link">
         Back to Home ✧.*
       </Link>
