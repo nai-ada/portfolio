@@ -15,6 +15,10 @@ const ClipprPage = () => {
   const [showTakeaway, setShowTakeaway] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
+  const openInNewTab = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
@@ -84,9 +88,16 @@ const ClipprPage = () => {
           <h1 className="gg-intro">Clippr DB.</h1>
           <a
             href="https://nadiavespalec.com/clippr-database"
+            target="_blank"
+            rel="noopener noreferrer"
             className="live-button"
           >
-            <button className="learn-more">
+            <button
+              onClick={() =>
+                openInNewTab('https://nadiavespalec.com/clippr-database')
+              }
+              className="learn-more"
+            >
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow"></span>
               </span>

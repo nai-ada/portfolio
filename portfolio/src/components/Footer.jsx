@@ -10,12 +10,6 @@ function Footer() {
     <div className="footer-container">
       <div className="social-links">
         <SocialMediaLink
-          url="https://www.instagram.com/"
-          imageUrl={instagramLogo}
-          altText="Instagram Logo"
-          className="social-icon"
-        />
-        <SocialMediaLink
           url="https://github.com/nai-ada"
           imageUrl={githubLogo}
           altText="GitHub Logo"
@@ -30,12 +24,18 @@ function Footer() {
       </div>
 
       <div className="email-container">
-        <a href="mailto:nadiavespalec00@gmail.com" className="email-link">Send me an email</a>
-        <img src={heartImage} alt="heart" className="heart-image" width="25px" />
+        <a href="mailto:nadiavespalec00@gmail.com" className="email-link">
+          Send me an email
+        </a>
+        <img
+          src={heartImage}
+          alt="heart"
+          className="heart-image"
+          width="25px"
+        />
       </div>
-      
+
       <p className="copyright">&copy; Nadia Vespalec 2024</p>
-      
     </div>
   );
 }
