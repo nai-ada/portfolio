@@ -83,7 +83,7 @@ function AboutTabs() {
         whileInView={'show'}
         viewport={{ once: true, amount: 0.7 }}
       >
-        Some Things I'm Good At
+        What's my Tech Stack?
       </motion.h3>
 
       <motion.div
